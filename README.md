@@ -1,4 +1,4 @@
-# goit-rdb-hw-07 - Часові ряди та напівструктуровані дані у задачах ML
+# goit-rdb-hw-07 — Часові ряди та напівструктуровані дані у задачах ML
 
 Домашнє завдання до Теми 7 курсу «Реляційні бази даних». Notebook `hw7_timeseries_jsonb.ipynb` будує відтворюваний pipeline у PostgreSQL (через `pgserver` у Google Colab): time-series ML-ознаки на даних NYC Taxi і JSONB event-log з GIN- та expression-індексами.
 
@@ -18,7 +18,7 @@
 
 ### Time-series features (`t7_hw_taxi_daily` → `v_t7_hw_taxi_features`)
 
-Daily-агрегат на рівні `(pickup_zone_id, ts_day)`; `ts_day DATE` - локальний день NYC.
+Daily-агрегат на рівні `(pickup_zone_id, ts_day)`; `ts_day DATE` — локальний день NYC.
 
 | Ознака | Window | Frame |
 |---|---|---|
@@ -42,9 +42,9 @@ Daily-агрегат на рівні `(pickup_zone_id, ts_day)`; `ts_day DATE` -
   * `@>` до і після `GIN (payload jsonb_path_ops)`;
   * `payload ->> 'device' = 'mobile'` до і після expression B-tree index;
   * додатково: `jsonb_ops` проти `jsonb_path_ops` для оператора `?` і вимірювання write-cost індексів.
-* `t7_hw_checkouts_norm` - нормалізована таблиця для checkout-подій. Той самий аналітичний запит виконується у JSONB- і normalized-версії.
+* `t7_hw_checkouts_norm` — нормалізована таблиця для checkout-подій. Той самий аналітичний запит виконується у JSONB- і normalized-версії.
 * Bonus: MongoDB aggregation pipeline як pseudocode.
-* Таблиця метрик EXPLAIN збирається автоматично. Після неї - Reflection.
+* Таблиця метрик EXPLAIN збирається автоматично. Після неї — Reflection.
 
 ## Як запустити
 
