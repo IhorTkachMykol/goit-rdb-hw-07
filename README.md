@@ -1,4 +1,4 @@
-# goit-rdb-hw-07 — Часові ряди та напівструктуровані дані у задачах ML
+# goit-rdb-hw-07 - Часові ряди та напівструктуровані дані у задачах ML
 
 Домашнє завдання до Теми 7 курсу «Реляційні бази даних». Notebook `hw7_timeseries_jsonb.ipynb` будує відтворюваний pipeline у PostgreSQL (через `pgserver` у Google Colab): time-series ML-ознаки на даних NYC Taxi і JSONB event-log з GIN- та expression-індексами.
 
